@@ -1,7 +1,10 @@
+//settign up variables
+
 var time = 0;
 var running = false;
 var startTime;
 
+//filling JsToHtml span element in html with input
 
 jsToHtml = document.getElementById('jsToHtml');
 document.getElementById('startStopButton').addEventListener('click', function() {
@@ -15,6 +18,7 @@ document.getElementById('startStopButton').addEventListener('click', function() 
     }
 });
 
+// adding pause function and restrict counter to 1 digit after the comma
 setInterval(function() {
     if (running){
         totalTime = Date.now() - startTime + time;
@@ -23,7 +27,7 @@ setInterval(function() {
 }, 100);
 
 
-
+// Reset button
 document.getElementById('clearButton').addEventListener('click', function() {
     if (!running) {
       time = 0;
