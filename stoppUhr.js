@@ -31,6 +31,6 @@ setInterval(function() {
 document.getElementById('clearButton').addEventListener('click', function() {
     if (!running) {
       time = 0;
-      JsToHtml.textContent = '0';
+      jsToHtml.textContent = '';
     }
   });
